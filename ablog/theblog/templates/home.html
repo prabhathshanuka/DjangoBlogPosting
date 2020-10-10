@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+<h1>Post</h1>
+
+<ul>
+{% for post in object_list %} <!--for loop to get list of posts -->
+	<li>{{post.title}} - {{post.author.first_name}} 
+		{{post.author.last_name}}<br/>
+	{{post.body}}</li>
+
+{% endfor%}
+</ul>
+</body>
+</html>
