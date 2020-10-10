@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.urls import path 
 #from . import views
-from .views import HomeView #comming from views.py
+from .views import HomeView,ArticleDetailView #comming from views.py and ArticleDetailView class
 
 urlpatterns = [
 
 	path('',HomeView.as_view(), name = "home"), #this is how we add the html view
+	path('article/<int:pk>', ArticleDetailView.as_view(), name= 'article-detail'),
    
 ]
