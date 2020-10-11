@@ -16,8 +16,9 @@
 		<a href="{% url 'article-detail' post.pk %}">
 
 		{{post.title}}</a> - {{post.author.first_name}} 
-		{{post.author.last_name}}<br/>
-	{{post.body}}</li> <!--list-->
+		{{post.author.last_name}} - <small><a href="{% url 'update_post' post.pk %}">(Edit)</a></small>
+		<br/>
+		{{post.body}}</li> <!--list-->
 
 {% endfor%}
 
