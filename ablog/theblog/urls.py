@@ -22,4 +22,4 @@ urlpatterns = [
 	path('',HomeView.as_view(), name = "home"), #this is how we add the html view
 	path('article/<int:pk>', ArticleDetailView.as_view(), name= 'article-detail'),
    
-]
+]   

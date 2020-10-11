@@ -1,18 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
 <!DOCTYPE html>
 <html>
 <head>
 	<title>test</title>
 </head>
 <body>
+ 
+
 <h1>Post</h1>
 
 <ul>
 {% for post in object_list %} <!--for loop to get list of posts -->
-	<li><a href="{% url 'article-detail' post.pk %}">{{post.title}} - {{post.author.first_name}} 
+	<li>
+		<a href="{% url 'article-detail' post.pk %}">
+
+		{{post.title}}</a> - {{post.author.first_name}} 
 		{{post.author.last_name}}<br/>
 	{{post.body}}</li> <!--list-->
 
 {% endfor%}
+
 </ul>
+
 </body>
+{% endblock %}  
 </html>
