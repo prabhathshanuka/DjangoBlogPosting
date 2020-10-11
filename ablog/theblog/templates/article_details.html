@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
+{% block title %}{{ post.title_tag}}{% endblock %}
+
+
 {% block content %}
 <html>
 <head>
-	<title>{% block title %}{{post.title_tag}}{% endblock %}</title>
+	
 </head>
 <body>
 	<h1> {{post.title}}</h1>
