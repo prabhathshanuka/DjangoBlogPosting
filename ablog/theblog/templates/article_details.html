@@ -3,7 +3,7 @@
 {% block content %}
 <html>
 <head>
-	<title></title>
+	<title>{% block title %}{{post.title_tag}}{% endblock %}</title>
 </head>
 <body>
 	<h1> {{post.title}}</h1>
