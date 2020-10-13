@@ -18,17 +18,26 @@
 		{{post.title}}</a> - 
 		{{post.author.first_name}} 
 		{{post.author.last_name}} -
-		{{post.post_date}} - 
+		{{post.post_date}} 
+		{% if user.is_authenticated %}
 		<small>
+		
 			<a href="{% url 'update_post' post.pk %}">(Edit)</a> -
 
 			<a href="{% url 'delete_post' post.pk %}">(Delete)</a>
 		</small>
+		{% endif %}
+		
+
 
 		<br/>
-		{{post.body}}</li> <!--list-->
+
+		{{post.body|slice:":200"|safe}}
+	</li> <!--list-->
+		
 
 {% endfor%}
+
 
 </ul>
 
